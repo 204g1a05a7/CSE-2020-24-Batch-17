@@ -4,3 +4,10 @@ To provide the solution for these we are using Cryptography technique for data s
 Hybrid cryptography involves a combination of symmetric and asymmetric encryption techniques to ensure the confidentiality and integrity of files in the cloud.
 File is splited into seven fragments. Each and every part of file is encrypted with the help of AES, Triple DES, Blowfish algorithms by applying the fragmentation. 
 For decrypting reverse process of encryption is applied.
+
+#Problem Statement
+When you are storing data in a public cloud, securing our data becomes a big challenge. 
+Our data will be stored in remote cloud servers. We can access our cloud remotely. 
+In this case, we must obey the provider license agreements. We need to trust the providers blindly.
+To overcome the problems of unauthorized access we are using hybrid cryptography technique by combining both symmetric and asymmetric encryption. 
+To develop this  we are implementing a secure cloud storage system with AES, Triple DES, Blowfish algorithms by applying the fragmentation. 
