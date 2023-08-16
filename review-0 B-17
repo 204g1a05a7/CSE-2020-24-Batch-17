@@ -11,3 +11,8 @@ Our data will be stored in remote cloud servers. We can access our cloud remotel
 In this case, we must obey the provider license agreements. We need to trust the providers blindly.
 To overcome the problems of unauthorized access we are using hybrid cryptography technique by combining both symmetric and asymmetric encryption. 
 To develop this  we are implementing a secure cloud storage system with AES, Triple DES, Blowfish algorithms by applying the fragmentation. 
+
+#Proposed System
+Proposed system integrates hybrid cryptography for data encryption and asymmetric key exchange, ensuring secure cloud storage.
+By integrating hybrid cryptography and fragmentation, our system empowers secret agencies to collaborate securely, preventing unauthorized access and maintaining the secrecy of shared files.
+
