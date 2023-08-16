@@ -1,0 +1,6 @@
+#Abstract
+Nowadays, Storing a large amount of data in a single file on the cloud can lead to issues like slow data access, less security, and difficulties in data management. 
+To provide the solution for these we are using Cryptography technique for data security. 
+Hybrid cryptography involves a combination of symmetric and asymmetric encryption techniques to ensure the confidentiality and integrity of files in the cloud.
+File is splited into seven fragments. Each and every part of file is encrypted with the help of AES, Triple DES, Blowfish algorithms by applying the fragmentation. 
+For decrypting reverse process of encryption is applied.
