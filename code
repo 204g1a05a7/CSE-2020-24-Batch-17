@@ -1,0 +1,54 @@
+from cryptography.fernet import Fernet
+import os
+with open("Original.txt", "w") as file:
+    # Write content to the file
+    file.write("Hello.\n")
+    file.write("You can add more lines as needed.\n")
+    file.write("Each write operation appends to the file content.")
+    #d=file.read("Original.txt","r")
+ 
+
+f = open("Original.txt", "r+")
+print("Output of Read function is ")
+print(f.read())
+print()
+def generate_key():
+    return Fernet.generate_key()
+
+def save_key(key, filename):
+    with open(filename, 'wb') as key_file:
+        key_file.write(key)
+
+def load_key(filename):
+    return open(filename, 'rb').read()
+
+def encrypt_file(file_path, key):
+    with open(file_path, 'rb') as file:
+        content = file.read()
+
+    fernet = Fernet(key)
+    encrypted_content = fernet.encrypt(content)
+
+    with open(file_path, 'wb') as file:
+        file.write(encrypted_content)
+
+def decrypt_file(file_path, key):
+    with open(file_path, 'rb') as file:
+        encrypted_content = file.read()
+
+    fernet = Fernet(key)
+    decrypted_content = fernet.decrypt(encrypted_content)
+
+    with open(file_path, 'wb') as file:
+        file.write(decrypted_content)
+
+# Generate and save the key
+key = generate_key()
+save_key(key, 'secret.key')
+
+# Encrypt a file
+file_to_encrypt = 'Original.txt'
+encrypt_file(file_to_encrypt, key)
+
+# Decrypt the file
+decrypt_file(file_to_encrypt, key)
